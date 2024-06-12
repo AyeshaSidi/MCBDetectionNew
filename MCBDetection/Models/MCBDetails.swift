@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct MCBDetails: Identifiable,Hashable {
+struct MCBDetails: Identifiable,Equatable {
     var id = UUID()
     var logo:String
     var name:String
@@ -17,36 +17,45 @@ struct MCBDetails: Identifiable,Hashable {
 }
 
 
-extension MCBDetails {
-    static func all() -> [MCBDetails] {
+//extension MCBDetails {
+//    
+//    static func all() -> [MCBDetails] {
+//        return [
+//            MCBDetails(logo:  "lightswitch.on", name: "SPD Switch", areaName: "Kitchen",referenceNumber: ""),
+//            MCBDetails(logo: "lightbulb", name: "Light", areaName: "Hall", referenceNumber: ""),
+//            MCBDetails(logo: "air.conditioner.horizontal", name: "Air Conditioner", areaName: "Bedroom",referenceNumber: ""),
+//            MCBDetails(logo: "lightswitch.on", name: "Socket", areaName: "Utility",referenceNumber: "")
+//            
+//        ]
+//    }
+//}
+    /*
+    static func all1() -> [MCBDetails] {
         return [
-            MCBDetails(logo:  "lightswitch.on", name: "SPD Switch", areaName: "Kitchen", referenceNumber: "E29F21109"),
-            MCBDetails(logo: "lightbulb", name: "Light", areaName: "Hall", referenceNumber: "E29F21111"),
-            MCBDetails(logo: "air.conditioner.horizontal", name: "Air Conditioner", areaName: "Bedroom", referenceNumber: "E29F21123"),
-            MCBDetails(logo: "lightswitch.on", name: "Socket", areaName: "Utility", referenceNumber: "E29F21145")
+            MCBDetails(logo:  "lightbulb", name: "Baking", areaName: "Kitchen"),
+            MCBDetails(logo: "lightbulb", name: "Gas", areaName: "Hall"),
+            MCBDetails(logo: "air.conditioner.horizontal", name: "Water Heater", areaName: "Bedroom"),
+            MCBDetails(logo: "lightswitch.on", name: "Switch", areaName: "Utility"),
+            MCBDetails(logo: "lightbulb", name: "Socket", areaName: "Utility"),
+            MCBDetails(logo: "lightbulb", name: "Light", areaName: "Utility")
         ]
     }
     
-    static func all1() -> [MCBDetails] {
-        return [
-            MCBDetails(logo:  "lightbulb", name: "Baking", areaName: "Kitchen", referenceNumber: "E29F21109"),
-            MCBDetails(logo: "lightbulb", name: "Gas", areaName: "Hall", referenceNumber: "E29F21111"),
-            MCBDetails(logo: "air.conditioner.horizontal", name: "Water Heater", areaName: "Bedroom", referenceNumber: "E29F21123"),
-            MCBDetails(logo: "lightswitch.on", name: "Switch", areaName: "Utility", referenceNumber: "E29F21145"),
-            MCBDetails(logo: "lightbulb", name: "Socket", areaName: "Utility", referenceNumber: "E29F21145"),
-            MCBDetails(logo: "lightbulb", name: "Light", areaName: "Utility", referenceNumber: "E29F21145")
-        ]
-    }
-    /*
     static func all2() -> [MCBDetails] {
         return [
-            MCBDetails(logo:  "lightbulb", name: "Light", areaName: "Kitchen", referenceNumber: "E29F21109"),
-            MCBDetails(logo: "alarm.fill", name: "Alarm", areaName: "Hall", referenceNumber: "E29F21111"),
-            MCBDetails(logo: "folder", name: "Motor", areaName: "Bedroom", referenceNumber: "E29F21123"),
-            MCBDetails(logo: "lightswitch.on", name: "Smart Switch", areaName: "Utility", referenceNumber: "E29F21145"),
-            MCBDetails(logo: "lightbulb", name: "Socket", areaName: "Utility", referenceNumber: "E29F21145"),
+            MCBDetails(logo:  "lightbulb", name: "Light", areaName: "Kitchen"),
+            MCBDetails(logo: "alarm.fill", name: "Alarm", areaName: "Hall"),
+            MCBDetails(logo: "folder", name: "Motor", areaName: "Bedroom"),
+            MCBDetails(logo: "lightswitch.on", name: "Smart Switch", areaName: "Utility"),
+            MCBDetails(logo: "lightbulb", name: "Socket", areaName: "Utility")
         ]
     }
-     */
+    
+    
+//    static var get: MCBDetails {
+//      
+//        return  MCBDetails(logo:  "lightbulb", name: "Light", areaName: "Kitchen");
+//        
+//    }
 }
-
+*/

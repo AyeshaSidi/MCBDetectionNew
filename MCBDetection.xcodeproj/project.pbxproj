@@ -18,6 +18,7 @@
 		6A2D7A252B7CAE3C00051F14 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2D7A242B7CAE3C00051F14 /* ViewModel.swift */; };
 		6A2D7A272B7CB73600051F14 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2D7A262B7CB73600051F14 /* Picker.swift */; };
 		6A2D7A332B7CD02900051F14 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2D7A2C2B7CCD8600051F14 /* Vision.framework */; };
+		6A53A1D42BFF5BAA0079AF07 /* best.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6A53A1D32BFF5BAA0079AF07 /* best.mlmodel */; };
 		6A55DBAD2B8F73340030C147 /* MCBCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55DBAC2B8F73340030C147 /* MCBCellView.swift */; };
 		6A55DBAF2B8F73440030C147 /* EditableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55DBAE2B8F73440030C147 /* EditableLabel.swift */; };
 		6A55DBB12B8F76ED0030C147 /* MCBDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55DBB02B8F76EC0030C147 /* MCBDetails.swift */; };
@@ -25,6 +26,11 @@
 		6A6E651C2B8C750400EC1941 /* Labeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E651B2B8C750400EC1941 /* Labeling.swift */; };
 		6AB081B22B8337F900BF2A12 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB081B12B8337F900BF2A12 /* CoreML.framework */; };
 		6AB082422B89E1CE00BF2A12 /* mcb_best.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6AB082412B89E1CE00BF2A12 /* mcb_best.mlmodel */; };
+		6AF62CFE2C0103D3002EF8D2 /* Application.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AF62CFD2C0103D3002EF8D2 /* Application.json */; };
+		6AF62D002C02336D002EF8D2 /* LabellingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF62CFF2C02336D002EF8D2 /* LabellingRowView.swift */; };
+		6AF62D022C023378002EF8D2 /* ApplicationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF62D012C023378002EF8D2 /* ApplicationListView.swift */; };
+		6AF62D042C0235FF002EF8D2 /* ApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF62D032C0235FF002EF8D2 /* ApplicationViewModel.swift */; };
+		6AF62D062C045718002EF8D2 /* ApplicationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF62D052C045718002EF8D2 /* ApplicationDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,7 @@
 		6A2D7A262B7CB73600051F14 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		6A2D7A2C2B7CCD8600051F14 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/Vision.framework; sourceTree = DEVELOPER_DIR; };
 		6A2D7A312B7CCEF700051F14 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/VisionKit.framework; sourceTree = DEVELOPER_DIR; };
+		6A53A1D32BFF5BAA0079AF07 /* best.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = best.mlmodel; path = ../../../../Desktop/best.mlmodel; sourceTree = "<group>"; };
 		6A55DBAB2B8F68BD0030C147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A55DBAC2B8F73340030C147 /* MCBCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCBCellView.swift; sourceTree = "<group>"; };
 		6A55DBAE2B8F73440030C147 /* EditableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableLabel.swift; sourceTree = "<group>"; };
@@ -69,6 +76,11 @@
 		6A6E651B2B8C750400EC1941 /* Labeling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labeling.swift; sourceTree = "<group>"; };
 		6AB081B12B8337F900BF2A12 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/CoreML.framework; sourceTree = DEVELOPER_DIR; };
 		6AB082412B89E1CE00BF2A12 /* mcb_best.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = mcb_best.mlmodel; sourceTree = "<group>"; };
+		6AF62CFD2C0103D3002EF8D2 /* Application.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Application.json; sourceTree = "<group>"; };
+		6AF62CFF2C02336D002EF8D2 /* LabellingRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabellingRowView.swift; sourceTree = "<group>"; };
+		6AF62D012C023378002EF8D2 /* ApplicationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationListView.swift; sourceTree = "<group>"; };
+		6AF62D032C0235FF002EF8D2 /* ApplicationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewModel.swift; sourceTree = "<group>"; };
+		6AF62D052C045718002EF8D2 /* ApplicationDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				6A55DBAB2B8F68BD0030C147 /* Info.plist */,
+				6A53A1D32BFF5BAA0079AF07 /* best.mlmodel */,
 				6AB082412B89E1CE00BF2A12 /* mcb_best.mlmodel */,
 				6A2D79EE2B7CAC3200051F14 /* MCBDetectionApp.swift */,
+				6AF62CFD2C0103D3002EF8D2 /* Application.json */,
 				6A6E651D2B8C8DD800EC1941 /* Handlers */,
 				6A2D7A1C2B7CAC9E00051F14 /* UIViewRepresentables */,
 				6A2D7A1B2B7CAC8C00051F14 /* Models */,
@@ -167,6 +181,8 @@
 			children = (
 				6A2D79F02B7CAC3200051F14 /* ContentView.swift */,
 				6A55DBAC2B8F73340030C147 /* MCBCellView.swift */,
+				6AF62CFF2C02336D002EF8D2 /* LabellingRowView.swift */,
+				6AF62D012C023378002EF8D2 /* ApplicationListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				6A2D7A242B7CAE3C00051F14 /* ViewModel.swift */,
+				6AF62D032C0235FF002EF8D2 /* ApplicationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -183,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				6A55DBB02B8F76EC0030C147 /* MCBDetails.swift */,
+				6AF62D052C045718002EF8D2 /* ApplicationDataModel.swift */,
 				6A2D7A262B7CB73600051F14 /* Picker.swift */,
 			);
 			path = Models;
@@ -320,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF62CFE2C0103D3002EF8D2 /* Application.json in Resources */,
 				6A2D79F72B7CAC3300051F14 /* Preview Assets.xcassets in Resources */,
 				6A2D79F32B7CAC3300051F14 /* Assets.xcassets in Resources */,
 			);
@@ -347,11 +366,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A2D7A1E2B7CACD900051F14 /* ImagePicker.swift in Sources */,
+				6AF62D042C0235FF002EF8D2 /* ApplicationViewModel.swift in Sources */,
 				6A2D79F12B7CAC3200051F14 /* ContentView.swift in Sources */,
+				6A53A1D42BFF5BAA0079AF07 /* best.mlmodel in Sources */,
+				6AF62D062C045718002EF8D2 /* ApplicationDataModel.swift in Sources */,
 				6A2D7A272B7CB73600051F14 /* Picker.swift in Sources */,
 				6A2D7A252B7CAE3C00051F14 /* ViewModel.swift in Sources */,
 				6A55DBB12B8F76ED0030C147 /* MCBDetails.swift in Sources */,
 				6A55DBAF2B8F73440030C147 /* EditableLabel.swift in Sources */,
+				6AF62D022C023378002EF8D2 /* ApplicationListView.swift in Sources */,
+				6AF62D002C02336D002EF8D2 /* LabellingRowView.swift in Sources */,
 				6A55DBAD2B8F73340030C147 /* MCBCellView.swift in Sources */,
 				6A6E651C2B8C750400EC1941 /* Labeling.swift in Sources */,
 				6A2D79EF2B7CAC3200051F14 /* MCBDetectionApp.swift in Sources */,
@@ -516,7 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MCBDetection/Preview Content\"";
-				DEVELOPMENT_TEAM = 6C33LAY85U;
+				DEVELOPMENT_TEAM = L7G38S6868;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -557,7 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MCBDetection/Preview Content\"";
-				DEVELOPMENT_TEAM = 6C33LAY85U;
+				DEVELOPMENT_TEAM = L7G38S6868;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

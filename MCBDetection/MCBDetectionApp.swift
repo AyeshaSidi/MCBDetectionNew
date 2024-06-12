@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MCBDetectionApp: App {
+    
+  // @ObservedObject var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(vm: ViewModel())
+            ContentView()
                 //.environmentObject(ViewModel())
         }
     }

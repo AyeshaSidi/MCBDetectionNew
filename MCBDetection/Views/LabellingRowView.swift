@@ -9,20 +9,21 @@ import SwiftUI
 
 struct LabellingRowView: View {
     
-    @State var selectedItem: MCBDetails?
+    //@StateObject var vm: ViewModel
+    //@State var selectedItem:  [String]
     @Binding var isShowing: Bool
-    var mcbDetails = MCBDetails.all()
-    var mcbDetails1 = MCBDetails.all1()
-    var mcbDetails2 = MCBDetails.all2()
-   @State var index: Int
-    
+    @State var mcbDetails : [MCBDetails]?
+   // var arrayOfmcbDetailsDic: [Int: [MCBDetails]] = [:]
+    @State var isItemSelected: Bool = false
+    @State var selectedIndexValue: Int
+    @State var isShowingApplication = false
     
     var body: some View {
         VStack {
             HStack {
                 Button(action: {
                     isShowing = false
-                    index = 0
+                    self.mcbDetails?.removeAll()
                 })
                 {
                     Image(systemName: "arrow.backward")
@@ -30,7 +31,7 @@ struct LabellingRowView: View {
                 }.padding(.leading, 10)
                     .padding(.trailing, 40)
                     .padding()
-                Text("Labelling row \(index + 1)")
+                Text("Labelling row \(selectedIndexValue + 1)")
                     .foregroundColor(.white)
                     .fontWeight(.semibold)
                 Spacer()
@@ -39,16 +40,22 @@ struct LabellingRowView: View {
             Spacer()
             ScrollView(.horizontal,showsIndicators: false) {
                 HStack(spacing:1) {
-                    ForEach(index == 0 ? mcbDetails : index == 1 ? mcbDetails1 : mcbDetails2, id: \.self) { item in
-                        MCBCellView(mcbDetails: item, name: item.areaName)
+                    if let dictionary = mcbDetails {
+                        ForEach(dictionary, id:\.id) { item in
+                            MCBCellView(mcbDetails: item)
+                            .foregroundColor(isItemSelected ? Color.blue : Color.black)
                             .onTapGesture {
-                                selectedItem = item
-                                print("Cell Tapped \(String(describing: selectedItem))")
+                                isItemSelected = true
                             }
                     }
-                }.frame(width: UIScreen.main.bounds.width - 10)
+                }
+                    else {
+                         
+                    }
+                }//.frame(width:UIScreen.main.bounds.width - 70)
                     .padding(.leading)
-            }.padding()
+                    .padding(.trailing)
+            }//.padding()
             Spacer()
             /*
              HStack {
@@ -74,40 +81,47 @@ struct LabellingRowView: View {
              */
             Spacer()
             Text("MODULE CONFIGURATION")
-           // NavigationLink(destination: ApplicationListView()) {
+                .padding(.bottom, 30)
+           // NavigationLink(destination: ApplicationListView(isShowingApplication: $isShowingApplication),isActive: $isShowingApplication) {
                 HStack {
                     Text("Application")
+                        .foregroundColor(.black)
                     Spacer()
-                    HStack {
-                        Text("")
-                        Button(action: {
-                            
-                        })
-                        {
-                            Image(systemName: "arrow.forward")
-                                .foregroundColor(.black)
-                                .frame(width: 150, height: 150)
-                        }
-                    }.padding(.trailing,30)
-                }
-          //  }
+                    //HStack {
+                        Text(mcbDetails?.first?.name ?? "")
+                   
+//                        Button(action: {
+//                            
+//                        })
+//                        {
+//                            Image(systemName: "arrow.forward")
+//                                .foregroundColor(.black)
+//                                .frame(width: 150, height: 150)
+//                        }
+                    
+                   // }
+                }.padding(.trailing,30)
+                    .padding(.leading, 30)
+           // }
             Divider()
             HStack {
                 Text("Location")
                 Spacer()
-                Text("")
-            }
+                Text(mcbDetails?.first?.areaName ?? "")
+            }.padding(.trailing,30)
+                .padding(.leading, 30)
             Divider()
             HStack {
                 Text("Reference number")
                 Spacer()
-                Text("")
-            }
+                Text(mcbDetails?.first?.referenceNumber ?? "")
+            }.padding(.trailing,30)
+                .padding(.leading, 30)
             Spacer()
             
             Button(action: {
                 
-                print("Button Tapped")
+                //print("Button Tapped")
             }){
                 Text("Save the row")
                     .foregroundColor(.white)
@@ -120,7 +134,10 @@ struct LabellingRowView: View {
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
             .onAppear() {
-                print("index value \(index)")
+                print("index value \(mcbDetails)")
+            }
+            .onDisappear() {
+                self.mcbDetails?.removeAll()
             }
     }
 }

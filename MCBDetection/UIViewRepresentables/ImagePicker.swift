@@ -50,10 +50,20 @@ struct ImagePicker: UIViewControllerRepresentable {
                 parent.selectedImage = image
                 //Converting the UIImage to CIImage
                 if let ciImage = CIImage(image: parent.selectedImage!) {
-                  detector.detectAndProcess(image: ciImage)
+                    viewModel.classification1 = detector.detectAndProcess(image: ciImage)
+//                    ForEach(viewModel.classification1, id: \.self){ row  in
+//                        ForEach(row, id: \.self) { column in
+//                            var item = MCBDetails(logo:  self.viewModel.logos.randomElement()!, name: self.viewModel.applicationNames.randomElement()!, areaName:  self.viewModel.areaNames.randomElement()!,referenceNumber: column)
+//                            viewModel.arrayOfmcbDetails.append(item)
+//                        }
+//                        
+//                    }
+                    //viewModel.arrayOfmcbDetails =  viewModel.all(classification: viewModel.classification1)
                     //viewModel.isImageUploaded = true
-                    viewModel.classification1 = detector.row1Labels
-                    viewModel.classification2 = detector.row2Labels
+                   
+                   // viewModel.classification1 = detector.row1Labels
+                    //viewModel.classification2 = detector.row2Labels
+                    // New */
                 }
                 else {
                     print("CIImage convert error")
